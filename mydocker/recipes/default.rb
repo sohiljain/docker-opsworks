@@ -24,6 +24,6 @@ end
 # Run container exposing ports
 docker_container 'my_image' do
   repo 'image_1'
-  tag 'latest'
+  tag 'v0.1.0'
   port '80:80'
 end
