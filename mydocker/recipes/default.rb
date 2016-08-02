@@ -9,6 +9,6 @@ end
 
 docker_image 'image_1' do
 	tag 'v0.1.0'
-	source '/files/Dockerfile'
+	source 'Dockerfile'
 	action :build
 end
