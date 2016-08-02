@@ -7,6 +7,12 @@ docker_service 'default' do
   action [:create, :start]
 end
 
+cookbook_file 'Dockerfile' do
+  source 'Dockerfile'
+  mode '0777'
+  action :create
+end
+
 docker_image 'image_1' do
 	tag 'v0.1.0'
 	source 'Dockerfile'
