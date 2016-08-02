@@ -1,0 +1,11 @@
+DEPENDENCIES
+  docker
+  mydocker
+    path: .
+    metadata: true
+
+GRAPH
+  compat_resource (12.10.7)
+  docker (2.9.3)
+    compat_resource (>= 12.9.0)
+  mydocker (0.1.0)
