@@ -3,3 +3,6 @@ FROM ankitkariryaa/sbt-javac
 
 # Set our working directory
 WORKDIR /home
+
+RUN echo $unm
+RUN echo $pcode
