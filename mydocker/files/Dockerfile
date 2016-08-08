@@ -4,5 +4,6 @@ FROM ankitkariryaa/sbt-javac
 # Set our working directory
 WORKDIR /home
 
-RUN echo $unm
-RUN echo $pcode
+COPY script.sh /home/script.sh
+
+RUN /bin/bash /home/script.sh
