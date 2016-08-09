@@ -13,13 +13,17 @@ cookbook_file 'Dockerfile' do
   action :create
 end
 
+cookbook_file 'script.sh' do
+  source 'script.sh'
+  mode '0777'
+  action :create
+end
+
 docker_image 'image_1' do
 	tag 'v0.1.0'
 	source 'Dockerfile'
 	action :build
 end
-
-#docker run -p 8080:8080 ankitkariryaa/sbt-javac
 
 # Run container exposing ports
 docker_container 'my_image' do
