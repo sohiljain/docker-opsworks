@@ -30,7 +30,6 @@ docker_container 'my_image' do
   repo 'image_1'
   tag 'v0.1.0'
   port '80:80'
-  source 'script.sh'
   env 'unm=#{node[:unm]}'
   env 'pcode=#{node[:pcode]}'
 end
