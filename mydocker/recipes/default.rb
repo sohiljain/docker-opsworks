@@ -19,12 +19,6 @@ cookbook_file 'script.sh' do
   action :create
 end
 
-docker_image 'image_1' do
-	tag 'v0.1.0'
-	source 'Dockerfile'
-	action :build
-end
-
 # Run container exposing ports
 docker_container 'my_image' do
   repo 'image_1'
