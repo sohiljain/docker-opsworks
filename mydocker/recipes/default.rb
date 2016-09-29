@@ -22,6 +22,7 @@ end
 # Run container exposing ports
 docker_container 'my_image' do
   repo 'ankitkariryaa/sbt-javac'
+  tag 'latest'
   port '80:80'
   env 'unm=#{node[:unm]}'
   env 'pcode=#{node[:pcode]}'
