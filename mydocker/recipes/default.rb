@@ -7,23 +7,23 @@ docker_service 'default' do
   action [:create, :start]
 end
 
-cookbook_file 'Dockerfile' do
-  source 'Dockerfile'
-  mode '0777'
-  action :create
-end
+# cookbook_file 'Dockerfile' do
+#   source 'Dockerfile'
+#   mode '0777'
+#   action :create
+# end
 
-cookbook_file 'script.sh' do
-  source 'script.sh'
-  mode '0777'
-  action :create
-end
+# cookbook_file 'script.sh' do
+#   source 'script.sh'
+#   mode '0777'
+#   action :create
+# end
 
-# Run container exposing ports
-docker_container 'my_image' do
-  repo 'ankitkariryaa/sbt-javac'
-  tag 'latest'
-  port '80:80'
-  env 'unm=#{node[:unm]}'
-  env 'pcode=#{node[:pcode]}'
-end
+# # Run container exposing ports
+# docker_container 'my_image' do
+#   repo 'ankitkariryaa/sbt-javac'
+#   tag 'latest'
+#   port '80:80'
+#   env 'unm=#{node[:unm]}'
+#   env 'pcode=#{node[:pcode]}'
+# end
