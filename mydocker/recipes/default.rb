@@ -11,8 +11,6 @@ docker_image 'image_1' do
   tag 'latest'
   source '/home/sohil/docker-sbt-sample/'
   action :build
-  env 'unm=#{node[:unm]}'
-  env 'pcode=#{node[:pcode]}'
 end
 
 # docker_image 'ankitkariryaa/sbt-javac' do
@@ -38,6 +36,6 @@ docker_container 'my_image' do
   tag 'latest'
   port '80:80'
   action :run
-  env 'unm=#{node[:unm]}'
-  env 'pcode=#{node[:pcode]}'
+  env 'unm=#{node['unm']}'
+  env 'pcode=#{node['pcode']}'
 end
