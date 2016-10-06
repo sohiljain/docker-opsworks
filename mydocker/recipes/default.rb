@@ -32,7 +32,7 @@ end
 
 # Run container exposing ports
 docker_container 'my_image' do
-  repo 'sohiljain/bdemo'
+  repo 'image_1'
   tag 'latest'
   port '80:80'
   action :run
