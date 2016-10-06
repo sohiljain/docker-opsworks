@@ -7,10 +7,16 @@ docker_service 'default' do
   action [:create, :start]
 end
 
-docker_image 'ankitkariryaa/sbt-javac' do
+docker_image 'image_1' do
   tag 'latest'
-  action :pull
+  source '/Dockerfile'
+  action :build
 end
+
+# docker_image 'ankitkariryaa/sbt-javac' do
+#   tag 'latest'
+#   action :pull
+# end
 
 # cookbook_file 'Dockerfile' do
 #   source 'Dockerfile'
@@ -26,9 +32,10 @@ end
 
 # Run container exposing ports
 docker_container 'my_image' do
-  repo 'ankitkariryaa/sbt-javac'
+  repo 'image_1'
   tag 'latest'
   port '80:80'
+  action :run
   env 'unm=#{node[:unm]}'
   env 'pcode=#{node[:pcode]}'
 end
