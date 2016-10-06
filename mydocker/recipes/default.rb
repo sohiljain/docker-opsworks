@@ -36,6 +36,6 @@ docker_container 'my_image' do
   tag 'latest'
   port '80:80'
   action :run
-  env 'unm=#{node['unm']}'
-  env 'pcode=#{node['pcode']}'
+  env 'unm=#{node[:unm]}'
+  env 'pcode=#{node[:pcode]}'
 end
