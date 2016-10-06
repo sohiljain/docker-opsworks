@@ -9,7 +9,7 @@ end
 
 docker_image 'image_1' do
   tag 'latest'
-  source '/Dockerfile'
+  source '/home/sohil/docker-sbt-sample/'
   action :build
 end
 
