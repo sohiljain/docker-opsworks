@@ -1,8 +1,8 @@
 sudo: true
 
-language: ruby
+language: scala
 
-ruby: 2.2.5
+scala: 2.11.8
 
 deploy:
   provider: opsworks
