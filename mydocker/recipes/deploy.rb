@@ -1,4 +1,4 @@
-# Running demo 
+#  
 # Cookbook Name:: mydocker
 # Recipe:: default
 #
