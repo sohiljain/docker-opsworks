@@ -34,7 +34,7 @@ end
 docker_container 'my_image' do
   repo 'image_1'
   tag 'latest'
-  port '80:80'
+  port '8080:8080'
   action :run
   env 'unm=sohil'
 #   env 'unm=#{node[:unm]}'
