@@ -7,8 +7,8 @@ apt-get install sudo
 sudo mkdir -p /var/log/app-boson-log
 chown `whoami` /var/log/app-boson-log/
 
-#Env settings
-pcode=696f180f22d0dbccc2b6b2f6642e2c93e2833159
+#Env settings - Please specify github passcode
+pcode=****************
 
 #Git checkout
 cd /home/
