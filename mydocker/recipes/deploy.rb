@@ -19,7 +19,5 @@ docker_container 'my_image' do
   tag 'latest'
   port '8080:8080'
   action :run
-  env 'unm=sohil'
-#   env 'unm=#{node[:unm]}'
-  env 'pcode=#{node[:pcode]}'
+  command 'java -jar /home/boson-http-log-metadata-assembly-1.5.0-search-logging.jar >> nohup.out &'
 end
