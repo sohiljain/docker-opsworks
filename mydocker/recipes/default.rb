@@ -4,14 +4,14 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-include_recipe 'aws'
+# include_recipe 'aws'
 
-aws_s3_file "/home/sohil" do
-  bucket "data-science-honest"
-  remote_path "logging"
-  aws_access_key_id node[:custom_access_key]
-  aws_secret_access_key node[:custom_secret_key]
-end
+# aws_s3_file "/home/sohil" do
+#   bucket "data-science-honest"
+#   remote_path "logging"
+#   aws_access_key_id node[:custom_access_key]
+#   aws_secret_access_key node[:custom_secret_key]
+# end
 
 docker_service 'default' do
   action [:create, :start]
