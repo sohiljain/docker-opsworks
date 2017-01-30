@@ -17,7 +17,7 @@ end
 docker_container 'my_image' do
   repo 'image_1'
   tag 'latest'
-  port '8080:8080'
+  port '8090:8080'
   action :run
   command 'java -jar /home/boson-http-log-metadata-assembly-1.5.0-search-logging.jar >> nohup.out &'
 end
